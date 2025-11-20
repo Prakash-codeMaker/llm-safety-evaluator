@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+litellm
+pydantic
+python-dotenv
+google-generativeai
+anthropic
+openai
+fpdf2 

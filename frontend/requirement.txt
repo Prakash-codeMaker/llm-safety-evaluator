@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+litellm
+pydantic
+python-dotenv
+streamlit

@@ -1,0 +1,14 @@
+# Ignore virtual environments
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Ignore sensitive credentials
+.env
+*.key
+secrets.toml
+
+# Ignore system files
+.DS_Store
