@@ -115,7 +115,7 @@ class PrivacyHarnessTests(unittest.TestCase):
             })
         comparison = summarize_paired_comparisons(records)
         self.assertEqual(comparison["matched_case_repetitions"], 1)
-        self.assertEqual(comparison["redacted"]["mean_literal_sensitive_exposure_rate_difference_vs_full"] if "mean_literal_sensitive_exposure_rate_difference_vs_full" in comparison["redacted"] else comparison["redacted"]["mean_literal_exposure_rate_difference_vs_full"], -1.0)
+        self.assertEqual(comparison["redacted"]["mean_literal_exposure_rate_difference_vs_full"], -1.0)
         self.assertEqual(comparison["redacted"]["mean_helpful_signal_coverage_difference_vs_full"], 0.5)
         self.assertEqual(comparison["minimal"]["mean_helpful_signal_coverage_difference_vs_full"], 0.0)
 
