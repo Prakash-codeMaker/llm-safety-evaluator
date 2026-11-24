@@ -2,7 +2,7 @@
 
 > **Faculty collaboration workspace:** this branch also contains a reproducible research environment under `research_lab/`, with three deterministic software demonstrations and a Codespaces/Live Share setup.
 >
-> **[Open this branch in GitHub Codespaces](https://codespaces.new/Prakash-codeMaker/llm-safety-evaluator?ref=faculty-collaboration-lab)** · [Read the collaboration guide](COLLABORATION.md) · [Review the research brief](research_lab/PROJECT_BRIEF.md)
+> **[Open this branch in GitHub Codespaces](https://codespaces.new/Prakash-codeMaker/llm-safety-evaluator?ref=faculty-collaboration-lab)** · [Read the collaboration guide](COLLABORATION.md) · [Review the research brief](research_lab/PROJECT_BRIEF.md) · [Contact the researcher](mailto:p9340297@gmail.com)
 
 A "Judge-as-a-Service" platform that automatically tests LLMs (GPT-4, Claude, DeepSeek, Gemini) for safety violations using adversarial prompts.
 
