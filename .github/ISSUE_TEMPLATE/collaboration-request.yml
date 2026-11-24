@@ -1,20 +1,16 @@
 name: Research discussion request
-description: Request a short academic discussion about a proposed research direction.
+description: Start a public research discussion about one of the reproducible directions.
 title: "[Research discussion]: "
 labels: ["research-discussion"]
 body:
-  - type: input
-    id: name
+  - type: markdown
     attributes:
-      label: Name and affiliation
-    validations:
-      required: true
+      value: |
+        Please do not post private contact details, unpublished datasets, credentials, or confidential university information in a public issue. For a private conversation, email p9340297@gmail.com.
   - type: input
-    id: contact
+    id: affiliation
     attributes:
-      label: Institutional email
-    validations:
-      required: true
+      label: Name and affiliation (optional)
   - type: dropdown
     id: direction
     attributes:
