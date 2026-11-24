@@ -1,0 +1,1 @@
+"""Reproducible, synthetic research demonstrations for faculty review."""

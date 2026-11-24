@@ -1,0 +1,27 @@
+name: Research or experiment feedback
+description: Suggest a scientific improvement or reproducibility check.
+title: "[Research feedback]: "
+labels: ["research-feedback"]
+body:
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Research direction
+      options:
+        - Robotics and demonstration data
+        - Trustworthy AI evaluation
+        - Scientific machine learning
+        - Reproducibility or environment
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation or proposed improvement
+      description: Please identify the relevant file, assumption, metric or experiment.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or reproducible steps
+    validations:
+      required: false
