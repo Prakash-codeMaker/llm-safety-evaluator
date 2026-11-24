@@ -10,5 +10,8 @@ __pycache__/
 *.key
 secrets.toml
 
+# Ignore generated experiment outputs
+artifacts/
+
 # Ignore system files
 .DS_Store
