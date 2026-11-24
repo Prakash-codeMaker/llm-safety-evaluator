@@ -12,6 +12,7 @@ A small research prototype for examining LLM responses to adversarial prompts an
 | evaluation/ | Paired full / redacted / minimal context evaluation for synthetic network-support cases | New, unit-tested harness; live provider runs are the researcher's responsibility |
 | tests/ | Offline tests for context construction, scoring, aggregation and error handling | Runs without an API key |
 | docs/EXPERIMENT_PROTOCOL.md | Research question, hypotheses, metrics, reproduction steps and limitations | Protocol only; no results claimed |
+| docs/INRIA_TRIBE_RESEARCH_NOTE.md | Proposed extension aligned with information-leakage research in network applications | Research plan, not completed work |
 
 ## Research direction
 
@@ -51,11 +52,11 @@ Python 3.10 or later is recommended. The test suite uses only the Python standar
          --seed 2026 \
          --output artifacts/network-privacy-evaluation.json
 
-   The default run makes **9 model calls** (3 cases × 3 conditions). Increase --repetitions only when you are comfortable with the additional API cost.
+   The default run makes **36 model calls** (12 cases × 3 conditions). Increase --repetitions only when you are comfortable with the additional API cost.
 
 5. Inspect the JSON output. Failed provider calls are marked error and excluded from metric denominators; they are not treated as safe. Raw model responses are omitted by default. Add --store-responses only when working with synthetic test data and when retaining outputs is appropriate.
 
-The model identifier and API provider configuration should be recorded when sharing any result. A model name alone may not uniquely identify a hosted snapshot. The output includes descriptive paired differences versus the full-context condition, computed only for case/repetition groups in which all three conditions succeeded; these are not statistical significance tests.
+The complete call schedule is randomised using the recorded seed. The model identifier and API provider configuration should be recorded when sharing any result. A model name alone may not uniquely identify a hosted snapshot. The output includes descriptive paired differences versus the full-context condition, computed only for case/repetition groups in which all three conditions succeeded; these are not statistical significance tests.
 
 ## Existing interactive prototype
 
@@ -65,10 +66,10 @@ The original dependencies are listed separately in backend/requirement.txt and f
 
 ## Reproducibility and responsible use
 
-- The included cases use synthetic identifiers, reserved .test emails and documentation-range IP addresses. They contain no real subscriber records.
+- The included 12 cases use synthetic identifiers, reserved .test emails and documentation-range IP addresses. One case includes an untrusted support-ticket note that attempts to override the assistant's privacy instructions.
 - Never run the harness on real customer information without the required authorisation, data-protection review, and a secure data-handling plan.
 - Do not interpret a zero literal-exposure rate as proof of privacy.
-- Do not present the three-case pilot as a representative benchmark, a general safety score, or evidence that one model is safer than another.
+- Do not present the 12-case pilot as a representative benchmark, a general safety score, or evidence that one model is safer than another.
 - For a stronger study, expand and review the scenario set, add semantic and partial-match detectors, conduct blinded human annotation, report agreement and uncertainty, and preserve the paired-by-case design.
 
 ## Project links
